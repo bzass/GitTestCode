@@ -1,0 +1,147 @@
+Log opened at 2016-04-24 10:52:46
+I: Connecting to configured address/port: localhost:9000.
+I: Connected to client. :-)
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///D:/appsvc/CodeWebApp/hello.php" language="PHP" xdebug:language_version="7.0.1-dev" protocol_version="1.0" appid="11940" idekey="bzass"><engine version="2.4.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+
+<- feature_set -i 1 -n max_depth -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="max_depth" success="1"></response>
+
+<- feature_set -i 2 -n max_children -v 9999
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="max_children" success="1"></response>
+
+<- breakpoint_list -i 3
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="3"></response>
+
+<- breakpoint_set -i 4 -t line -f file:///d:/appsvc/CodeWebApp/hello.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="4" id="119400001"></response>
+
+<- breakpoint_list -i 5
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="5"><breakpoint type="line" filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6" state="enabled" hit_count="0" hit_value="0" id="119400001"></breakpoint></response>
+
+<- breakpoint_list -i 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="6"><breakpoint type="line" filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6" state="enabled" hit_count="0" hit_value="0" id="119400001"></breakpoint></response>
+
+<- run -i 7
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="7" status="break" reason="ok"><xdebug:message filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6"></xdebug:message></response>
+
+<- stack_get -i 8
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="8"><stack where="{main}" level="0" type="file" filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6"></stack></response>
+
+<- context_names -i 9 -d 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="9"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+
+<- context_get -i 10 -d 0 -c 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="10" context="0"></response>
+
+<- run -i 11
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="11" status="break" reason="ok"><xdebug:message filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6"></xdebug:message></response>
+
+<- stack_get -i 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="12"><stack where="{main}" level="0" type="file" filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6"></stack></response>
+
+<- context_names -i 13 -d 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="13"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+
+<- context_get -i 14 -d 0 -c 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="14" context="0"></response>
+
+<- run -i 15
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="15" status="stopping" reason="ok"></response>
+
+<- stop -i 16
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stop" transaction_id="16" status="stopped" reason="ok"></response>
+
+Log closed at 2016-04-24 10:52:54
+
+Log opened at 2016-04-24 10:52:58
+I: Connecting to configured address/port: localhost:9000.
+I: Connected to client. :-)
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///D:/appsvc/CodeWebApp/hello.php" language="PHP" xdebug:language_version="7.0.1-dev" protocol_version="1.0" appid="14244" idekey="bzass"><engine version="2.4.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+
+<- feature_set -i 1 -n max_depth -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="max_depth" success="1"></response>
+
+<- feature_set -i 2 -n max_children -v 9999
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="max_children" success="1"></response>
+
+<- breakpoint_list -i 3
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="3"></response>
+
+<- breakpoint_set -i 4 -t line -f file:///d:/appsvc/CodeWebApp/hello.php -n 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="4" id="142440001"></response>
+
+<- breakpoint_list -i 5
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="5"><breakpoint type="line" filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6" state="enabled" hit_count="0" hit_value="0" id="142440001"></breakpoint></response>
+
+<- breakpoint_list -i 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="6"><breakpoint type="line" filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6" state="enabled" hit_count="0" hit_value="0" id="142440001"></breakpoint></response>
+
+<- run -i 7
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="7" status="break" reason="ok"><xdebug:message filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6"></xdebug:message></response>
+
+<- stack_get -i 8
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="8"><stack where="{main}" level="0" type="file" filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6"></stack></response>
+
+<- context_names -i 9 -d 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="9"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+
+<- context_get -i 10 -d 0 -c 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="10" context="0"></response>
+
+<- step_over -i 11
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="step_over" transaction_id="11" status="break" reason="ok"><xdebug:message filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6"></xdebug:message></response>
+
+<- stack_get -i 12
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="12"><stack where="{main}" level="0" type="file" filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="6"></stack></response>
+
+<- context_names -i 13 -d 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="13"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+
+<- context_get -i 14 -d 0 -c 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="14" context="0"></response>
+
+<- step_over -i 15
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="step_over" transaction_id="15" status="break" reason="ok"><xdebug:message filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="8"></xdebug:message></response>
+
+<- stack_get -i 16
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="16"><stack where="{main}" level="0" type="file" filename="file:///D:/appsvc/CodeWebApp/hello.php" lineno="8"></stack></response>
+
+<- context_names -i 17 -d 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="17"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+
+<- context_get -i 18 -d 0 -c 0
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="18" context="0"></response>
+
+<- step_over -i 19
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="step_over" transaction_id="19" status="stopping" reason="ok"></response>
+
+<- stop -i 20
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stop" transaction_id="20" status="stopped" reason="ok"></response>
+
+Log closed at 2016-04-24 10:53:07
+
+Log opened at 2016-04-24 10:53:53
+I: Connecting to configured address/port: localhost:9000.
+I: Connected to client. :-)
+-> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" fileuri="file:///D:/appsvc/CodeWebApp/hello.php" language="PHP" xdebug:language_version="7.0.1-dev" protocol_version="1.0" appid="18972" idekey="bzass"><engine version="2.4.0"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[http://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2016 by Derick Rethans]]></copyright></init>
+
+<- feature_set -i 1 -n max_depth -v 1
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="1" feature="max_depth" success="1"></response>
+
+<- feature_set -i 2 -n max_children -v 9999
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="feature_set" transaction_id="2" feature="max_children" success="1"></response>
+
+<- breakpoint_list -i 3
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="3"></response>
+
+<- breakpoint_list -i 4
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="4"></response>
+
+<- run -i 5
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="run" transaction_id="5" status="stopping" reason="ok"></response>
+
+<- stop -i 6
+-> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="http://xdebug.org/dbgp/xdebug" command="stop" transaction_id="6" status="stopped" reason="ok"></response>
+
+Log closed at 2016-04-24 10:53:53
+
